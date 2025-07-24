@@ -1,0 +1,7 @@
+name = "nav-sphere"
+main = "_worker.js"
+compatibility_date = "2025-07-23"
+keep_vars = true
+
+
+
