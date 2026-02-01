@@ -1,0 +1,117 @@
+# 用户中心环境
+- projectId: user-center
+  env: PROD
+  url: https://user.prod.example.com
+  description: 生产环境
+  enabled: true
+
+- projectId: user-center
+  env: PRE
+  url: https://user.pre.example.com
+  description: 预发布环境
+  enabled: true
+
+- projectId: user-center
+  env: TEST
+  url: https://user.test.example.com
+  description: 测试环境
+  enabled: true
+
+# 订单系统环境
+- projectId: order-system
+  env: PROD
+  url: https://order.prod.example.com
+  description: 生产环境
+  enabled: true
+
+- projectId: order-system
+  env: PRE
+  url: https://order.pre.example.com
+  description: 预发布环境
+  enabled: true
+
+- projectId: order-system
+  env: TEST
+  url: https://order.test.example.com
+  description: 测试环境
+  enabled: true
+
+# 支付网关环境
+- projectId: payment-gateway
+  env: PROD
+  url: https://pay.prod.example.com
+  description: 生产环境
+  enabled: true
+
+- projectId: payment-gateway
+  env: TEST
+  url: https://pay.test.example.com
+  description: 测试环境
+  enabled: true
+
+# Grafana 环境
+- projectId: grafana
+  env: PROD
+  url: https://grafana.prod.example.com
+  description: 生产监控
+  enabled: true
+
+# Prometheus 环境
+- projectId: prometheus
+  env: PROD
+  url: https://prometheus.prod.example.com
+  description: 生产指标
+  enabled: true
+
+- projectId: prometheus
+  env: TEST
+  url: https://prometheus.test.example.com
+  description: 测试指标
+  enabled: true
+
+# AlertManager 环境
+- projectId: alertmanager
+  env: PROD
+  url: https://alert.prod.example.com
+  description: 生产告警
+  enabled: true
+
+# Confluence 环境
+- projectId: confluence
+  env: PROD
+  url: https://wiki.example.com
+  description: 企业知识库
+  enabled: true
+
+# GitBook 环境
+- projectId: gitbook
+  env: PROD
+  url: https://docs.example.com
+  description: API 文档中心
+  enabled: true
+
+# Jenkins 环境
+- projectId: jenkins
+  env: PROD
+  url: https://jenkins.prod.example.com
+  description: 生产构建
+  enabled: true
+
+- projectId: jenkins
+  env: TEST
+  url: https://jenkins.test.example.com
+  description: 测试构建
+  enabled: true
+
+# ArgoCD 环境
+- projectId: argocd
+  env: PROD
+  url: https://argocd.prod.example.com
+  description: 生产部署
+  enabled: true
+
+- projectId: argocd
+  env: PRE
+  url: https://argocd.pre.example.com
+  description: 预发布部署
+  enabled: true

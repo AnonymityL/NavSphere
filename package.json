@@ -1,14 +1,21 @@
 {
-  "name": "cosmic-cycle",
+  "name": "navsphere",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "bun run scripts/validate.ts && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "validate": "bun run scripts/validate.ts"
   },
   "dependencies": {
-    "astro": "^5.17.1"
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.17.1",
+    "js-yaml": "^4.1.1",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/js-yaml": "^4.0.9"
   }
 }

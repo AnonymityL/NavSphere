@@ -1,0 +1,27 @@
+# 通用链接（不属于特定项目的网址）
+- id: company-website
+  name: 公司官网
+  url: https://www.example.com
+  description: 公司官方网站
+  categoryId: docs
+  icon: 🏢
+  order: 100
+  enabled: true
+
+- id: github
+  name: GitHub
+  url: https://github.com
+  description: 代码仓库
+  categoryId: dev-platform
+  icon: 🐙
+  order: 200
+  enabled: true
+
+- id: stackoverflow
+  name: Stack Overflow
+  url: https://stackoverflow.com
+  description: 技术问答社区
+  categoryId: docs
+  icon: 📝
+  order: 201
+  enabled: true

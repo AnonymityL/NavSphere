@@ -11,7 +11,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
-
+bun-debug.log*
 
 # environment variables
 .env
@@ -22,3 +22,16 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# generated data
+src/data/navigation.json
+
+# editor files
+*.swp
+*.swo
+*~
+
+# temporary files
+*.tmp
+*.temp
+/tmp/

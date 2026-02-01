@@ -1,0 +1,23 @@
+- id: dev-platform
+  name: 开发平台
+  description: 内部开发工具和平台
+  icon: 🔧
+  order: 1
+
+- id: monitor
+  name: 监控系统
+  description: 应用和基础设施监控
+  icon: 📊
+  order: 2
+
+- id: docs
+  name: 文档中心
+  description: 技术文档和知识库
+  icon: 📚
+  order: 3
+
+- id: ops
+  name: 运维工具
+  description: 运维自动化工具
+  icon: ⚙️
+  order: 4

@@ -1,0 +1,53 @@
+---
+interface Props {
+  categoryName: string;
+  categoryIcon?: string;
+  categoryDescription?: string;
+  items: any[];
+}
+
+const { categoryName, categoryIcon = '📁', categoryDescription, items } = Astro.props;
+---
+
+<section class="mb-8">
+  <div class="flex items-center gap-2 mb-4">
+    <span class="text-2xl">{categoryIcon}</span>
+    <div>
+      <h2 class="text-xl font-bold text-gray-900">{categoryName}</h2>
+      {categoryDescription && (
+        <p class="text-sm text-gray-500">{categoryDescription}</p>
+      )}
+    </div>
+    <div class="flex-1 h-px bg-gradient-to-r from-gray-300 to-transparent ml-4"></div>
+  </div>
+
+  {items.length > 0 ? (
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+      {items.map((item) => (
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          data-searchable={`${item.projectName} ${item.env} ${item.projectDescription || ''}`}
+          class="group flex items-center gap-3 p-4 rounded-lg border border-gray-200 bg-white hover:border-blue-300 hover:shadow-md transition-all duration-200"
+        >
+          <span class="text-2xl flex-shrink-0">{item.icon || '🔗'}</span>
+          <div class="flex-1 min-w-0">
+            <div class="flex items-center gap-2 mb-1">
+              <h3 class="font-semibold text-gray-900 truncate">{item.projectName}</h3>
+              <span class="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-700">{item.env}</span>
+            </div>
+            {item.projectDescription && (
+              <p class="text-sm text-gray-500 truncate">{item.projectDescription}</p>
+            )}
+          </div>
+          <span class="text-gray-400 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">↗</span>
+        </a>
+      ))}
+    </div>
+  ) : (
+    <div class="text-center py-8 text-gray-400">
+      <p>No items</p>
+    </div>
+  )}
+</section>

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bun create astro:*)",
+      "Bash(fd:*)",
+      "Bash(bun add:*)",
+      "Bash(bun run:*)",
+      "Bash(pkill:*)",
+      "Bash(awk:*)",
+      "Bash(bunx astro check:*)",
+      "Bash(curl:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+- id: user-center
+  name: 用户中心
+  description: 用户管理和认证服务
+  categoryId: dev-platform
+  icon: 👤
+  order: 1
+
+- id: order-system
+  name: 订单系统
+  description: 订单处理和管理
+  categoryId: dev-platform
+  icon: 🛒
+  order: 2
+
+- id: payment-gateway
+  name: 支付网关
+  description: 支付接口集成
+  categoryId: dev-platform
+  icon: 💳
+  order: 3
+
+- id: grafana
+  name: Grafana
+  description: 监控面板
+  categoryId: monitor
+  icon: 📈
+  order: 1
+
+- id: prometheus
+  name: Prometheus
+  description: 指标采集和存储
+  categoryId: monitor
+  icon: 🔥
+  order: 2
+
+- id: alertmanager
+  name: AlertManager
+  description: 告警管理
+  categoryId: monitor
+  icon: 🔔
+  order: 3
+
+- id: confluence
+  name: Confluence
+  description: 团队知识库
+  categoryId: docs
+  icon: 📖
+  order: 1
+
+- id: gitbook
+  name: GitBook
+  description: API 文档
+  categoryId: docs
+  icon: 📕
+  order: 2
+
+- id: jenkins
+  name: Jenkins
+  description: CI/CD 流水线
+  categoryId: ops
+  icon: 🚀
+  order: 1
+
+- id: argocd
+  name: ArgoCD
+  description: GitOps 持续部署
+  categoryId: ops
+  icon: ☁️
+  order: 2
