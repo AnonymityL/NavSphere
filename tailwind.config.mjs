@@ -8,9 +8,9 @@ export default {
           DEFAULT: '#10b981',
           light: '#d1fae5'
         },
-        pre: {
-          DEFAULT: '#f59e0b',
-          light: '#fef3c7'
+        staging: {
+          DEFAULT: '#8b5cf6',
+          light: '#ede9fe'
         },
         test: {
           DEFAULT: '#3b82f6',

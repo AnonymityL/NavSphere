@@ -1,4 +1,6 @@
 ---
+import { ENV_LABELS, ENV_COLORS } from '../types/index';
+
 interface Props {
   name: string;
   env: string;
@@ -9,14 +11,9 @@ interface Props {
 }
 
 const { name, env, url, description, icon = '🔗', disabled = false } = Astro.props;
-const searchText = `${name} ${env} ${description || ''}`.trim();
-
-const colors = {
-  TEST: 'bg-blue-100 text-blue-700',
-  PRE: 'bg-yellow-100 text-yellow-700',
-  PROD: 'bg-green-100 text-green-700'
-};
-const colorClass = colors[env] || colors.TEST;
+const envLabel = ENV_LABELS[env] || env;
+const colorClass = ENV_COLORS[env] || ENV_COLORS.test;
+const searchText = `${name} ${envLabel} ${description || ''}`.trim();
 ---
 
 <a
@@ -36,7 +33,7 @@ const colorClass = colors[env] || colors.TEST;
   <div class="flex-1 min-w-0">
     <div class="flex items-center gap-2 mb-1">
       <h3 class="font-semibold text-gray-900 truncate">{name}</h3>
-      <span class:list={['inline-flex items-center px-2 py-0.5 rounded text-xs font-medium', colorClass]}>{env}</span>
+      <span class:list={['inline-flex items-center px-2 py-0.5 rounded text-xs font-medium', colorClass]}>{envLabel}</span>
     </div>
     {description && (
       <p class="text-sm text-gray-500 truncate">{description}</p>

@@ -24,9 +24,9 @@ function loadYaml<T>(filePath: string): T {
  */
 function getEnvOrder(env: EnvType): number {
   const orderMap: Record<EnvType, number> = {
-    PROD: 1,
-    PRE: 2,
-    TEST: 3
+    prod: 1,
+    staging: 2,
+    test: 3
   };
   return orderMap[env];
 }

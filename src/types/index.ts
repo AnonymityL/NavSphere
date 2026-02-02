@@ -1,7 +1,25 @@
 /**
  * 环境类型
  */
-export type EnvType = 'TEST' | 'PRE' | 'PROD';
+export type EnvType = 'test' | 'staging' | 'prod';
+
+/**
+ * 环境中文标签映射
+ */
+export const ENV_LABELS: Record<EnvType, string> = {
+  test: '测试',
+  staging: '预发',
+  prod: '生产'
+} as const;
+
+/**
+ * 环境颜色映射
+ */
+export const ENV_COLORS: Record<EnvType, string> = {
+  test: 'bg-blue-100 text-blue-700',
+  staging: 'bg-purple-100 text-purple-700',
+  prod: 'bg-green-100 text-green-700'
+} as const;
 
 /**
  * 分类
@@ -81,7 +99,7 @@ export interface CategoryBlock {
  */
 import { z } from 'zod';
 
-export const EnvTypeSchema = z.enum(['TEST', 'PRE', 'PROD']);
+export const EnvTypeSchema = z.enum(['test', 'staging', 'prod']);
 
 export const CategorySchema = z.object({
   id: z.string().min(1),
